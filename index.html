@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/ebbaa9cac3.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="" id="body">
+    
+    <div id="viewer-container"></div>
+    <div class="ifc-tree-menu conatiner2">
+        <ul id="myUL">
+            <li id="tree-root">
+                <span class="caret">Beverages</span>
+                <ul class="nested">
+                    <li>Water</li>
+                    <li>Coffee</li>
+                    <li>
+                        <span class="caret">Tea</span>
+                        <ul class="nested">
+                            <li>Black Tea</li>
+                            <li>White Tea</li>
+                            <li><span class="caret">Green Tea</span>
+                                <ul class="nested">
+                                    <li>Sencha</li>
+                                    <li>Gyokuro</li>
+                                    <li>Matcha</li>
+                                    <li>Pi Lo Chun</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<!-- check lisata do wygaszania elementów -->
+<div class="checboxes conatiner2">
+    <div>
+        wals
+        <input type="checkbox" checked="true" id="IFCWALLSTANDARDCASE">
+    </div>
+    <div>
+        slabs
+        <input type="checkbox" checked="true" id="IFCSLAB">
+    </div>
+    <div>
+        Furniture
+        <input type="checkbox" checked="true" id="IFCFURNISHINGELEMENT">
+    </div>
+    <div>
+        door
+        <input type="checkbox" checked="true" id="IFCDOOR">
+    </div>
+    <div>
+        window
+        <input type="checkbox" checked="true" id="IFCWINDOW">
+    </div>
+    <div>
+        plate
+        <input type="checkbox" checked="true" id="IFCPLATE">
+    </div>
+    <div>
+        member
+        <input type="checkbox" checked="true" id="IFCMEMBER">
+    </div>
+</div>
+
+    <div id="table-container" class="conatiner2">
+        <button id="export" class="conatiner2"><i class="fa-solid fa-download"></i></button>
+        <table id="walls-table">
+
+            <tr>
+                    <th colspan="2">Project Walls</th>
+                </tr>
+            <tbody>
+               
+                <tr>
+                    <td colspan="2">Walls 01</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Example</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div id="button-container" class="conatiner2"></div>
+<div class="infoBtnStyle">
+    <button class="infoBtn conatiner2" id="infoBtn1">WALLS</button>
+    <button class="infoBtn conatiner2" id="infoBtn2">Sclabs</button>
+    <button class="infoBtn conatiner2" id="infoBtn3">DOOR</button>
+    <button class="infoBtn conatiner2" id="infoBtn4">WINDOW</button>
+    <button class="infoBtn conatiner2" id="infoBtn5">PLATE</button>
+    <button class="infoBtn conatiner2" id="infoBtn6">MEMBER</button>
+</div>
+
+
+<div class="menue">
+    <button class="btn" id="selector1"><i class="fa-solid fa-circle-info"></i> <p class="info">Information about element</p></button>
+    <button class="btn" id="selector2"><i class="fa-solid fa-layer-group"></i><p class="info">FlorPlans</p> </button>
+    <button class="btn" id="selector3"><i class="fa-solid fa-folder-tree"></i><p class="info">threeMenue</p> </button>
+    <button class="btn" id="selector4"><i class="fa-solid fa-ruler-combined"></i><p class="info">Measure</p> </button>
+    <button class="" id="selector5"><i class="fa-solid fa-eraser"></i><p class="info">DelateElwmwnt</p> </button>
+    <button class="btn" id="selector6"><i class="fa-solid fa-arrow-down-short-wide"></i><p class="info">CheckBox</p> </button>
+</div>
+    
+    
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <script src="./bundle.js"></script>
+</body>
+</html>

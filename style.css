@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+}
+.body{
+    cursor: cell;
+}
+
+/* <!-- check lisata do wygaszania elementów --> */
+
+.checboxes{
+    position: absolute;
+    width: 10vw;
+    height: 100vh;
+    top: 20vh;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.checboxes div{
+    background-color: rgb(189, 189, 189);
+    color: #000;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 25px;
+    opacity: 70%;
+    border: 1px solid black;
+    z-index: 1000;
+}
+
+
+#viewer-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.ifcjs-dimension-preview {
+    width: 1rem;
+    height: 1rem;
+    background-color: bisque;
+    border-radius: 1rem;
+    opacity: 0.5;
+}
+
+.ifcjs-dimension-label {
+    background-color: black;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+}
+.ifc-tree-menu {
+    position: absolute;
+    overflow-y: scroll;
+    background-color: rgb(199, 192, 192);
+    height: 50vh;
+    opacity: 0.7;
+}
+
+li ul {
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+    margin: 0.5rem;
+    padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+    display: none;
+    margin-left: 1rem;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+    display: block;
+    margin-left: 10px;
+}
+#table-container{
+    position: absolute;
+    max-height: 100vh;
+    background-color: white;
+    overflow: scroll;  
+    top: 25px;
+    
+}
+.conatiner2 {
+    visibility: hidden;
+    
+}
+#walls-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    max-width: 30vw;
+    cursor: ns-resize;
+}
+
+#walls-table td, #walls-table th {
+    max-width: 30vw;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#walls-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#walls-table tr:hover {background-color: #ddd;}
+
+#walls-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+#viewer-container {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    outline: none;
+    width: 100vw;
+    height: 100vh;
+}
+#export {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 2px;
+    top: 2px;
+    border-radius: 25px;
+}
+#export:hover{
+    cursor: pointer;
+    background-color: #81c96b;
+}
+.menue {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 90vh;
+    cursor: pointer;
+    z-index: 10;
+    
+}
+.menue button {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.menue button:hover{
+    background-color: beige;
+    box-shadow: 2px 5px 1px rgb(245, 148, 148);
+}
+
+
+#infoBtn1{
+    margin-left: 30vw;
+    
+}
+#infoBtn2{
+
+    margin-left: 39vw;
+}
+#infoBtn3{
+
+    margin-left: 48vw;
+
+}
+#infoBtn4{
+
+    margin-left: 57vw;
+
+}
+#infoBtn5{
+
+    margin-left: 66vw;
+
+}
+#infoBtn6{
+
+    margin-left: 75vw;
+
+}
+
+.infoBtnStyle {
+    width: 10vw;
+    height: 100vh;
+    top: 30vh;
+    right: 2rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+
+}
+.infoBtn{
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 20px;
+    z-index: 1000;
+}
+.infoBtn button {
+    padding: 15px;
+    margin: 10px;
+    
+}
+.info{
+    position: absolute;
+    visibility: hidden;
+}
+.menue p {
+    padding: 5px;
+    border-radius: 10px;
+    background: #fff;
+    opacity: 70%;
+    transition-delay:2s;
+    
+}
+
+#selector1:hover .info{
+visibility: visible;
+}
+#selector2:hover .info{
+visibility: visible;
+}
+#selector3:hover .info{
+visibility: visible;
+}
+#selector4:hover .info{
+visibility: visible;
+}
+#selector5:hover .info{
+visibility: visible;
+}
+#selector6:hover .info{
+visibility: visible;
+}
+.infoBtn:hover{
+    background-color: beige;
+    box-shadow: 2px 5px 1px rgb(45, 65, 214);
+    
+}
+.fa-solid{
+font-size: 30px;
+}
+
+#button-container{
+    width: 10vw;
+    height: 100vh;
+    top: 10vh;
+    right: 2rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1000;
+   
+
+}
+#button-container button{
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+#button-container button:hover{
+    background-color: beige;
+    box-shadow: 2px 5px 1px rgb(245, 148, 148);
+}

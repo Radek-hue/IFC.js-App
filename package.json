@@ -4,16 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "three": "^0.149.0"
+    "rollup": "^3.19.1"
   },
   "dependencies": {
-    "rollup": "^3.14.0"
+    "dxf-writer": "^1.18.4",
+    "three": "^0.135.0",
+    "web-ifc": "^0.0.39",
+    "web-ifc-viewer": "^1.0.213"
   }
 }
